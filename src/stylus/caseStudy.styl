@@ -1,0 +1,210 @@
+#caseStudy
+	color #000
+	background #EEE
+	position absolute
+	top 0
+	right 0
+	width calc(60%)
+	min-height 100%
+	border-left 1px solid #111
+	box-sizing: border-box
+	padding 0 20px
+	padding-top 30px
+	z-index 1000
+	font-family: 'Open Sans', sans-serif
+	line-height 1.9em
+	font-size 12px
+
+	a
+		color #777
+		text-decoration none
+		position relative
+		display inline-block
+		transition all 0.25s
+		padding 0 2px
+		margin 1px 2px
+		&:before
+			content:''
+			position:absolute
+			display block
+			width calc(100% + 6px)
+			height 100%
+			top 0
+			left -3px
+			background rgba(0,0,0,.05)
+			z-index -1
+		&:after
+			content:''
+			position:absolute
+			display block
+			width calc(100% + 6px)
+			height 100%
+			top 0
+			background #FFF
+			transition all 0.25s
+			transform scaleX(0)
+			transform-origin top left
+			z-index -1
+			left -3px
+
+		&:hover
+			color #000
+			&:after
+				transform scaleX(1)
+
+	h1
+		text-align center
+		padding 20px 0 50px 0
+		font-size 24px
+		display block
+
+
+	.by
+		text-align: center;
+		margin-top: -45px;
+		color: #888;
+
+	h2
+		font-size 20px
+		padding-bottom 20px
+		margin-top 40px
+		&.fin
+			text-align: center
+			margin-bottom 50px
+
+	p, pre
+		color: #888;
+		padding-bottom 20px
+
+	pre
+		font-size 10px
+		line-height 1.6em
+		background #e0e0e0
+		padding 10px 20px
+		margin-bottom 15px
+		color #666
+		overflow-x auto
+
+	ul
+		padding-bottom 20px
+	li
+		color: #888;
+
+	img
+		background #000
+		display inline-block
+		width calc(25% - 1px)
+		height auto
+		// opacity .3
+		transition opacity .2s ease-out
+		box-sizing: border-box
+		// &:hover
+		// 	margin 0
+		// 	padding 0
+		// 	opacity 1
+
+	.slide
+		box-sizing: border-box
+		width 100%
+		padding 0 10px
+		margin auto
+		padding-bottom 2%
+		margin-bottom 2%
+
+
+	.toogleButton
+		width 150px
+		height 22px
+		background #fff
+		padding 5px
+		text-align center
+		margin-bottom 20px
+		transition all .15s ease-out
+		cursor pointer
+
+
+	.slider
+		cursor pointer
+		width 100%
+		height 18px
+		position relative
+		display inline-block
+		vertical-align center
+		line-height 2.4em
+		margin-right 10px
+		color #888
+		div
+			box-sizing: border-box
+			width 100%
+			height 100%
+			position absolute
+			top 0
+			left 0
+		.base
+			background #e0e0e0
+		.percent
+			transition all .5s ease-out
+			transform-origin top left
+			background #fff
+		.text
+			top -4px
+			left 3px
+			font-size 10px
+			user-select none
+
+.three
+	position fixed
+	box-sizing border-box
+	border-left 1px solid #111
+
+@media (max-width: 900px)
+	#caseStudy
+		img
+			width 33%
+
+
+@media (max-width: 800px)
+	#caseStudy
+		img
+			width 50%
+
+
+@media (max-width: 700px)
+	.three
+		width 100%
+	.show
+		width 100%
+		padding-top 120%
+	#caseStudy
+		background rgba(0,0,0,0.1)
+		width 100%
+		color #fff
+		.by,pre,p,li,.slider,a
+			color: #aaa;
+		pre
+			background rgba(30,30,30,0.9)
+		img
+			width 50%
+		.slide
+			background rgba(0,0,0,0.7)
+			padding 5px 20px
+		.conclusion
+			background rgba(0,0,0,0.95)
+		.slider
+			height 40px
+			.base
+				background rgba(30,30,30,0.9)
+			.percent
+				background rgba(40,40,40,0.9)
+			.text
+				top 7px
+				left 7px
+		.toogleButton
+			background rgba(200,200,200,0.9)
+		a
+			&:hover
+				color #FFF
+			&:before
+				background rgba(200,200,200,0.5)
+			&:after
+				background rgba(255,255,255,0.5)
