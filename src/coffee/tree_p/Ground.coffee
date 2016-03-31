@@ -44,7 +44,7 @@ class Ground extends THREE.Points
 			size: 	   { type: "f", value: 3*(window.devicePixelRatio/2) }
 			radius:    { type: "f", value: .6 }
 			height:    { type: "f", value: 100 }
-			dist:    { type: "f", value: 100 }
+			dist:    { type: "f", value: 200 }
 			scale: 	   { type: "f", value: Stage3d.camera.far }
 			time: 	   { type: "f", value: 0 }
 		}

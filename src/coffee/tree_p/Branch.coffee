@@ -182,7 +182,7 @@ class Branch extends THREE.Object3D
 			texture:   	{ type: "t", value: loader.load( "img/particle.png" ) }
 			opacity:   	{ type: "f", value: 1 }
 			hide: 	   	{ type: "f", value: 0 }
-			size: 	   	{ type: "f", value: 2*(window.devicePixelRatio/2) }
+			size: 	   	{ type: "f", value: 4*(window.devicePixelRatio/2) }
 			scale: 	   	{ type: "f", value: 6720 }
 			color: 	   	{ type: "v3", value: new THREE.Vector3(color.r,color.g,color.b) }
 			time: 	   	{ type: "f", value: 0 }

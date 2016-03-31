@@ -35,7 +35,7 @@ class Main
 			Components.getButtonID('particleOnly').div.style.opacity = if isOn then "1" else "0.3"
 		)
 
-		@colorIdx = 2
+		@colorIdx = 4
 		@colorTree = [{r:.6,g:.4,b:.1},{r:.1,g:.4,b:.6},{r:.5,g:.5,b:.2},{r:.6,g:.2,b:.15},{r:.25,g:.25,b:.6},{r:.6,g:.6,b:.45},{r:.8,g:.7,b:.8}]
 		@colorGround = [{r:.6,g:.4,b:.1},{r:.1,g:.4,b:.6},{r:.5,g:.5,b:.2},{r:.6,g:.2,b:.15},{r:.25,g:.25,b:.6},{r:.6,g:.6,b:.45},{r:.8,g:.7,b:.8}]
 
@@ -44,6 +44,7 @@ class Main
 		@floor.position.y -= 900
 		@newTree()
 		cb(1)
+
 		Stage.onUpdate.add(@update)
 		return
 

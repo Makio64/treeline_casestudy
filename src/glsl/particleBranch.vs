@@ -17,10 +17,9 @@ void main() {
 	vT = i/pathLength;
 	float extra = mod(i,1.);
 	int ii = int(floor(i));
-	pos = (1.-extra)*path[ii-1] + extra*path[ii];
+	pos = mix(path[ii-1],path[ii],extra);
 	pos += aOffset*(.4+1.-smoothstep(0.9, 1., vT));
 	vPos = pos;
-	vec4 mvPosition = modelViewMatrix * vec4( pos, 1.0 );
 	gl_PointSize = 1.+size*sin((time/400.+aTime))*.5;
-	gl_Position = projectionMatrix * mvPosition;
+	gl_Position = projectionMatrix * modelViewMatrix * vec4( pos, 1.0 );
 }
